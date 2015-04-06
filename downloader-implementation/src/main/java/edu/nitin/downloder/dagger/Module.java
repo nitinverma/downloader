@@ -1,10 +1,7 @@
 package edu.nitin.downloder.dagger;
 
 import dagger.Provides;
-import edu.nitin.downloder.PartDownloadProcessor;
-import edu.nitin.downloder.FileDownloadProcessor;
-import edu.nitin.downloder.PartDownloadTask;
-import edu.nitin.downloder.TriggerFileDownload;
+import edu.nitin.downloder.*;
 import edu.nitin.downloder.otto.EventBus;
 
 import javax.inject.Singleton;
@@ -17,6 +14,7 @@ import javax.inject.Singleton;
                 FileDownloadProcessor.class,
                 PartDownloadProcessor.class,
                 PartDownloadTask.class,
+                FileDownloadRanges.class,
                 TriggerFileDownload.class
         },
         complete = true,

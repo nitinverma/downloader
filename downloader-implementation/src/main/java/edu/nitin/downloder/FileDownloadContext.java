@@ -19,6 +19,7 @@ public class FileDownloadContext {
     public void setWorkDir(final File workDir) {
         this.workDir = workDir;
     }
+
     public URL getDownloadURL() {
         return downloadURL;
     }
@@ -41,5 +42,19 @@ public class FileDownloadContext {
 
     public void setDownloadLocation(File downloadLocation) {
         this.downloadLocation = downloadLocation;
+    }
+
+    public File getPartFile(final Range range) {
+        return new File(
+                getWorkDir(),
+                "app-" + range.start + "-" + range.end + ".apk"
+        );
+    }
+
+    public File getOutputFile() {
+        return new File(
+                getWorkDir(),
+                "app.apk"
+        );
     }
 }
